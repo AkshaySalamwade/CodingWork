@@ -1,0 +1,26 @@
+
+
+Types of Locks
+
+1.Intrinsic Lock 
+These are build into every object in java. You don't see them, but they're there.
+When you use a synchronized keyword, You're using these automatic Locks
+
+
+2.Explicit Lock / Manual Locks:
+Theese are more advanced lockes you can control yourself using the Lock class from java.util.concurrent.locks.
+You explicitely say when to lock and unloack, giving you more control over how and when people can write in the notebook.
+
+
+
+In Below example we have used the Thread T1 and T2 to withdraw money from BankAccount .
+we have applied synchronized(Intrinsic Lock) on withdraw methods. Now
+suppose T1 is processing the Payment so T2 need to wait till T1 complete withdraw, 
+suppose their is T1 get issue and got stuck  while processing so t2 has to wait indifine time   
+SO here we use the Manual Lock to Solve the above issue 
+
+Lock is Inteface
+has methods
+lock()
+tryLock()
+unLock()
